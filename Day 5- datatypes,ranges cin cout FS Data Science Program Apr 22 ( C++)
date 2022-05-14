@@ -1,0 +1,193 @@
+                       Q1. Write a program In C++ for simple calculator performing addition, subtraction, multiplication, division operations?
+  
+  ANSWER:-
+  
+  # include <iostream>
+using namespace std;
+
+int main() {
+
+  char op;
+  float num1, num2;
+
+  cout << "Enter operator: +, -, *, /: ";
+  cin >> op;
+
+  cout << "Enter two operands: ";
+  cin >> num1 >> num2;
+
+  switch(op) {
+
+    case '+':
+      cout << num1 << " + " << num2 << " = " << num1 + num2;
+      break;
+
+    case '-':
+      cout << num1 << " - " << num2 << " = " << num1 - num2;
+      break;
+
+    case '*':
+      cout << num1 << " * " << num2 << " = " << num1 * num2;
+      break;
+
+    case '/':
+      cout << num1 << " / " << num2 << " = " << num1 / num2;
+      break;
+      
+    default:
+      // If the operator is other than +, -, * or /, error message is shown
+      cout << "Error! operator is not correct";
+      break;
+  }
+
+  return 0;
+}
+====================================================================================================================================================================
+
+                                       Q2. Write a program In C++ to accept temperature in Celsius and convert to Fahrenheit?
+
+ANSWER :-
+ 
+#include<iostream>
+using namespace std;
+int main()
+{
+float cel , far;
+cout<<"Enter Temperature in Celsius : ";
+cin>>cel;
+far=(cel * 9.0) / 5.0 + 32;
+cout<<"Temperature in Fahrenheit is : " <<far<<endl;
+return 0;
+}
+
+=====================================================================================================================================================================
+
+                            Q3. Write a program In C++ to Find the Area and Perimeter of a Rectangle using Width and Length ?
+                            
+ANSWER:-
+
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+ 
+ 
+int main()
+{
+	int l,w,perimeter,area;
+	cout<<"Length : ";
+	cin>>l;
+	cout<<"Width : ";
+	cin>>w;
+	area=l*w;
+	perimeter=2*(l+w);
+	cout<<"Area of Rectangle : "<<area<<endl;
+	cout<<"Perimeter of Rectangle : "<<perimeter;
+ 
+}
+
+=====================================================================================================================================================================
+
+                                               Q4. Write a program In C++ to Swap Numbers Without Using Temporary Variables?
+ ANSWER:
+ 
+ #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int x = 10, y = 5;
+
+	// Code to swap 'x' and 'y'
+	x = x + y; // x now becomes 15
+	y = x - y; // y becomes 10
+	x = x - y; // x becomes 5
+	cout << "After Swapping: x =" << x << ", y=" << y;
+}
+
+======================================================================================================================================================================
+                                               
+                                                Q5. Write a Program in C++ to Check Whether a character is Vowel or Consonant?
+                                                
+ANSWER:-
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char c;
+    bool isLowercaseVowel, isUppercaseVowel;
+
+    cout << "Enter an alphabet: ";
+    cin >> c;
+
+    // evaluates to 1 (true) if c is a lowercase vowel
+    isLowercaseVowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+
+    // evaluates to 1 (true) if c is an uppercase vowel
+    isUppercaseVowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+
+    // show error message if c is not an alphabet
+    if (!isalpha(c))
+      printf("Error! Non-alphabetic character.");
+    else if (isLowercaseVowel || isUppercaseVowel)
+        cout << c << " is a vowel.";
+    else
+        cout << c << " is a consonant.";
+
+    return 0;
+}
+
+======================================================================================================================================================================
+
+                                              Q6. Write a program in C++ to Find Largest Number Among Three Numbers?
+                                              
+ANSWER:-
+
+#include <iostream>
+using namespace std;
+
+int main() {    
+    float n1, n2, n3;
+
+    cout << "Enter three numbers: ";
+    cin >> n1 >> n2 >> n3;
+
+    if(n1 >= n2 && n1 >= n3)
+        cout << "Largest number: " << n1;
+
+    if(n2 >= n1 && n2 >= n3)
+        cout << "Largest number: " << n2;
+    
+    if(n3 >= n1 && n3 >= n2)
+        cout << "Largest number: " << n3;
+  
+    return 0;
+}
+
+=====================================================================================================================================================================
+
+                                                         Q7. Write a program in C++ toFind Quotient and Remainder ?
+                                                         
+ANSWER:-
+
+      #include <iostream>
+using namespace std;
+
+int main()
+{    
+    int divisor, dividend, quotient, remainder;
+
+    cout << "Enter dividend: ";
+    cin >> dividend;
+
+    cout << "Enter divisor: ";
+    cin >> divisor;
+
+    quotient = dividend / divisor;
+    remainder = dividend % divisor;
+
+    cout << "Quotient = " << quotient << endl;
+    cout << "Remainder = " << remainder;
+
+    return 0;
+}                                                    
